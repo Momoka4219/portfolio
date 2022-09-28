@@ -1,0 +1,462 @@
+
+/* Responsive */
+
+body{
+	position: relative;
+}
+
+/* about */
+
+.bxforgmap iframe{
+		-webkit-filter: grayscale(0%);
+	-moz-filter: grayscale(0%);
+	-ms-filter: grayscale(0%);
+	-o-filter: grayscale(0%);
+	filter: grayscale(0%);
+}
+
+
+
+@media only screen and (max-width: 600px){
+
+	.wrap{
+	
+
+	padding-top: 0;
+	
+	position: relative;
+	font-family: 'Open Sans', sans-serif;
+
+	}
+
+	.con_index:before{
+	content:"";
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:-2;
+  width:100%;
+  height: 260vh;
+  /*背景画像設定*/
+  background:url("https://media.nomadicmatt.com/nzguide.jpg") no-repeat center;
+  animation: ChangeGrayScale 3s ease-in-out;
+  background-size:cover;
+}
+
+
+
+	.work{
+		padding-top: 80px;
+		height: 100%;
+		padding-bottom: 100px;
+	}
+
+	.title_work{
+
+    padding-top:30px;
+    padding-bottom: 100px;
+	}
+	.row{
+		display: block;
+		padding:0;
+		height: 100%;
+	}
+			@keyframes slideIn {
+ 		 0% {
+    		transform: translateX(180px);
+   		 	opacity: 0;
+ 		 }
+ 		 100% {
+    		transform: translateX(0);
+ 		 }
+ 		 40%,100% {
+    		opacity: 1;
+  		}
+  	}
+			@keyframes slideOut {
+ 		 0% {
+    		transform: translateX(-180px);
+   		 	opacity: 0;
+ 		 }
+ 		 100% {
+    		transform: translateX(0);
+ 		 }
+ 		 40%,100% {
+    		opacity: 1;
+  		}
+  	}
+
+
+	.res{
+			display: block;
+			width: 100%;
+			height: 100%;
+			z-index: 999;
+			opacity: 0;
+			/*background:rgba(266,162,172,0.8);*/
+			background: #111;
+			color: #fff;
+	
+
+			position: fixed;
+					
+			
+			right: -120%;
+			top: 0;
+			text-align: center;
+			 transition: all 0.6s;
+	
+	}
+
+	.res.panelactive{
+		right: 0;
+		opacity: 1;
+  	z-index:999;
+	}
+
+	.display{
+		display: block;
+	}
+
+	@keyframes demo{
+		0%{
+				transform: translateX(-40px);
+		}
+
+		100%{
+			transform: translateX(0);
+		}
+	}
+
+	.slide{
+		animation: slideOut 1s cubic-bezier(0.25, 1, 0.5, 1) 1 ease-out;
+	}
+	.slide2{
+		animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 ease-out;
+	}
+
+
+	.res .hako{
+		
+			width: 80%;
+			height: 20%;
+
+			margin-top: 200px;
+			margin-left: auto;
+			margin-right: auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+	}
+
+	.me li a{
+		color: #fff;
+	}
+
+
+	.me li a:focus{
+		color: crimson;
+	}
+
+
+	.menu{
+		display: none;
+	}
+
+	.displaynone{
+		display: none;
+	}
+
+	.res ul li{
+		padding: 15px 0;
+	}
+
+	.res ul li a{
+		font-size: 50px;
+
+	}
+
+	.res #cross{
+		position: absolute;
+		right: 10px;
+		top: 0;
+		font-size: 60px;
+	}
+
+
+	/* hamburger menu css */
+
+	.openbtn1{
+  position: fixed;/*ボタン内側の基点となるためrelativeを指定*/
+  cursor: pointer;
+  background: transparent;
+    width: 50px;
+    height:50px;
+  border-radius: 5px;
+  right: 10px;
+		top: 20px;
+		z-index: 9999;
+}
+
+/*ボタン内側*/
+.openbtn1 span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+    left: 14px;
+    height: 4px;
+    border-radius: 2px;
+  background: #fff;
+    width: 45%;
+  }
+
+.openbtn1 span:nth-of-type(1) {
+  top:15px; 
+}
+
+.openbtn1 span:nth-of-type(2) {
+  top:23px;
+}
+
+.openbtn1 span:nth-of-type(3) {
+  top:31px;
+}
+
+
+	/* hamburger menu  | active*/
+
+.openbtn1.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn1.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.openbtn1.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+	
+
+	.menu2 li a{
+		color: red;
+	}
+
+	.menu2 li a:hover{
+		cursor: pointer;
+		color: gray;
+
+	}
+
+
+	#ham{
+		display: block;
+		margin-left: auto;
+		font-size: 40px;
+	}
+
+
+/* about page */
+
+	.aboutwrap {
+		height: 100%;
+		padding-bottom: 170px;
+		padding-top: 80px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.flex .h2{
+		font-size: 16px;
+	}
+
+
+/* contact page */
+
+.wrap_contact{
+	
+}
+
+
+.cont{
+ 	
+  padding-top: 60px;
+  border-radius: 5px;
+
+  width: 80%;
+  margin: auto;
+  height: 600px;
+}
+
+form{
+	width: 80%;
+	height: 80%;
+	display: flex;
+	flex-direction: column;
+ 	margin: auto;
+	padding: 20px;
+	border: none;
+	box-shadow: none;
+	align-items: center;
+	position: relative;
+}
+input[type=text]:focus, select:focus, textarea:focus{
+	border-bottom: 1px solid #333;
+	color: #111;
+
+
+
+	
+}
+
+
+	
+
+
+/* work pages */
+
+
+#project_title:after{ 
+	content: "";
+	height: 2px;
+	width: 100%;
+	background: #111;
+	position: absolute;
+	bottom: -10px;
+	left: 0;
+
+ }
+
+
+/* hms */
+
+.wrap.hms{
+	min-height:800px;
+	width: 98%;
+}
+
+.hms_description_section{
+	padding-bottom: 100px;
+	height: 100%;
+}
+
+.flex{
+	padding-top: 10px;
+}
+
+.h2{
+	font-size: 22px;
+ /* loading */
+}
+
+
+/* work_slide*/
+
+
+.next{
+	right: 0;
+}
+
+.prev{
+	left: 0;
+}
+
+/* endline*/
+
+
+/*========= ローディング画面のためのCSS ===============*/
+#splash {
+  display:none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  z-index: 9999999;
+  text-align:center;
+  color:#fff;
+}
+
+#splash-logo {
+  display:none;
+  position: absolute;
+  font-family: 'Dancing Script', cursive;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+.splashbg{
+    display: none;
+}
+
+
+/*body.appear .splashbg{
+    display: block;
+    content: "";
+    position:fixed;
+  z-index: 999;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+  left: 0;
+    transform: scaleX(0);
+    background-color: #333;
+  animation-name:PageAnime;
+  animation-duration:1.2s;
+  animation-timing-function:ease-in-out;
+  animation-fill-mode:forwards;
+}*/
+
+@keyframes PageAnime{
+  0% {
+    transform-origin:left;
+    transform:scaleX(0);
+  }
+  50% {
+    transform-origin:left;
+    transform:scaleX(1);
+  }
+  50.001% {
+    transform-origin:right;
+  }
+  100% {
+    transform-origin:right;
+    transform:scaleX(0);
+  }
+}
+
+
+#wrap{
+  opacity: 0;
+}
+
+
+body.appear #wrap{
+  animation-name:PageAnimeAppear;
+  animation-duration:1s;
+  animation-delay: 0.8s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+}
+
+@keyframes PageAnimeAppear{
+  0% {
+  opacity: 0;
+  }
+  100% {
+  opacity: 1;
+}
+}
+
+}
